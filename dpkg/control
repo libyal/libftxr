@@ -1,0 +1,30 @@
+Source: libftxr
+Section: unknown
+Priority: extra
+Maintainer: Joachim Metz <joachim.metz@gmail.com>
+Build-Depends: debhelper (>= 7), autotools-dev
+Standards-Version: 3.8.3
+Homepage: https://github.com/libyal/libftxr/
+
+Package: libftxr
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: libftxr-dbg
+Description: Library to access the Transactional Registry (TxR) format
+ libftxr is a library to access the Transactional Registry (TxR) format.
+
+Package: libftxr-dbg
+Architecture: any
+Section: debug
+Depends: libftxr (= ${Source-Version}), ${misc:Depends}
+Description: Debugging symbols for libftxr
+ Debugging symbols for libftxr.
+
+Package: libftxr-dev
+Section: libdevel
+Architecture: any
+Depends: libftxr (= ${Source-Version})
+Description: Header files and libraries for developing applications for libftxr
+ Header files and libraries for developing applications for libftxr.
+
