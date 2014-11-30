@@ -33,9 +33,15 @@
 
 /* The following type definitions hide internal data structures
  */
+#if defined( HAVE_DEBUG_OUTPUT ) && !defined( WINAPI )
+typedef struct libftxr_record {}	libftxr_record_t;
+
+#else
 typedef intptr_t libftxr_record_t;
 
 #endif
+
+#endif /* defined( HAVE_LOCAL_LIBFTXR ) */
 
 #endif
 

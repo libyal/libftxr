@@ -19,8 +19,8 @@
  * along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#if !defined( _LIBFFTXR_LIBFUSN_H )
-#define _LIBFFTXR_LIBFUSN_H
+#if !defined( _LIBFTXR_LIBFUSN_H )
+#define _LIBFTXR_LIBFUSN_H
 
 #include <common.h>
 
