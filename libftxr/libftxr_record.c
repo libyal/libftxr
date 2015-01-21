@@ -1253,7 +1253,7 @@ int libftxr_record_read_update_journal_entry_list(
 
 			goto on_error;
 		}
-		if( libfusn_record_read(
+		if( libfusn_record_copy_from_byte_stream(
 		     usn_record,
 		     &( record_data[ record_data_offset ] ),
 		     record_data_size - record_data_offset,
@@ -1263,7 +1263,7 @@ int libftxr_record_read_update_journal_entry_list(
 			 error,
 			 LIBCERROR_ERROR_DOMAIN_IO,
 			 LIBCERROR_IO_ERROR_READ_FAILED,
-			 "%s: unable to read update journal entry.",
+			 "%s: unable to read USN record.",
 			 function );
 
 			goto on_error;
@@ -1277,7 +1277,7 @@ int libftxr_record_read_update_journal_entry_list(
 			 error,
 			 LIBCERROR_ERROR_DOMAIN_RUNTIME,
 			 LIBCERROR_RUNTIME_ERROR_GET_FAILED,
-			 "%s: unable to retrieve update journal entry size.",
+			 "%s: unable to retrieve USN record size.",
 			 function );
 
 			goto on_error;
