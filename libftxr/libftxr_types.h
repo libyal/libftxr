@@ -39,9 +39,9 @@ typedef struct libftxr_record {}	libftxr_record_t;
 #else
 typedef intptr_t libftxr_record_t;
 
-#endif
+#endif /* defined( HAVE_DEBUG_OUTPUT ) && !defined( WINAPI ) */
 
 #endif /* defined( HAVE_LOCAL_LIBFTXR ) */
 
-#endif
+#endif /* !defined( _LIBFTXR_INTERNAL_TYPES_H ) */
 
