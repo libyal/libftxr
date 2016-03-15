@@ -1,13 +1,13 @@
 include_HEADERS = \
-        libftxr.h
+	libftxr.h
 
 pkginclude_HEADERS = \
-        libftxr/codepage.h \
-        libftxr/definitions.h \
-        libftxr/error.h \
-        libftxr/extern.h \
-        libftxr/features.h \
-        libftxr/types.h
+	libftxr/codepage.h \
+	libftxr/definitions.h \
+	libftxr/error.h \
+	libftxr/extern.h \
+	libftxr/features.h \
+	libftxr/types.h
 
 EXTRA_DIST = \
 	libftxr.h.in \
