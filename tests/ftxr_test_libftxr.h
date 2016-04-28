@@ -1,5 +1,5 @@
 /*
- * The libfguid header wrapper
+ * The internal libftxr header
  *
  * Copyright (C) 2011-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -19,31 +19,19 @@
  * along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#if !defined( _LIBFTXR_LIBFGUID_H )
-#define _LIBFTXR_LIBFGUID_H
+#if !defined( _FTXR_TEST_LIBFTXR_H )
+#define _FTXR_TEST_LIBFTXR_H
 
 #include <common.h>
 
-/* Define HAVE_LOCAL_LIBFGUID for local use of libfguid
+/* If Cygwin libtool DLL support is enabled and do not want to create static
+ * executables set LIBFTXR_DLL_IMPORT before including libftxr.h
  */
-#if defined( HAVE_LOCAL_LIBFGUID )
-
-#include <libfguid_definitions.h>
-#include <libfguid_identifier.h>
-#include <libfguid_types.h>
-
-#else
-
-/* If libtool DLL support is enabled set LIBFGUID_DLL_IMPORT
- * before including libfguid.h
- */
-#if defined( _WIN32 ) && defined( DLL_IMPORT )
-#define LIBFGUID_DLL_IMPORT
+#if defined( _WIN32 ) && defined( DLL_EXPORT ) && !defined( HAVE_STATIC_EXECUTABLES )
+#define LIBFTXR_DLL_IMPORT
 #endif
 
-#include <libfguid.h>
+#include <libftxr.h>
 
-#endif /* defined( HAVE_LOCAL_LIBFGUID ) */
-
-#endif /* !defined( _LIBFTXR_LIBFGUID_H ) */
+#endif /* !defined( _FTXR_TEST_LIBFTXR_H ) */
 

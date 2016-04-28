@@ -1,4 +1,5 @@
 MSVSCPP_FILES = \
+	ftxr_test_get_version/ftxr_test_get_version.vcproj \
 	libcerror/libcerror.vcproj \
 	libcnotify/libcnotify.vcproj \
 	libcstring/libcstring.vcproj \
