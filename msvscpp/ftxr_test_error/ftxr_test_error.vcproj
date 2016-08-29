@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="ftxr_test_get_version"
-	ProjectGUID="{25D28A0D-81BD-4547-BB54-730EF76502D0}"
-	RootNamespace="ftxr_test_get_version"
+	Name="ftxr_test_error"
+	ProjectGUID="{D373C3DA-BB16-4070-9AC7-B1D9F0822050}"
+	RootNamespace="ftxr_test_error"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="131072"
 	>
@@ -176,7 +176,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\tests\ftxr_test_get_version.c"
+				RelativePath="..\..\tests\ftxr_test_error.c"
 				>
 			</File>
 		</Filter>

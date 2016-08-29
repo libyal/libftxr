@@ -16,12 +16,25 @@ EXTRA_DIST = \
 	$(check_SCRIPTS)
 
 check_PROGRAMS = \
+	ftxr_test_error \
 	ftxr_test_get_version
+
+ftxr_test_error_SOURCES = \
+	ftxr_test_error.c \
+	ftxr_test_libcstring.h \
+	ftxr_test_libftxr.h \
+	ftxr_test_macros.h \
+	ftxr_test_unused.h
+
+ftxr_test_error_LDADD = \
+	../libftxr/libftxr.la \
+	@LIBCSTRING_LIBADD@
 
 ftxr_test_get_version_SOURCES = \
 	ftxr_test_get_version.c \
 	ftxr_test_libcstring.h \
 	ftxr_test_libftxr.h \
+	ftxr_test_macros.h \
 	ftxr_test_unused.h
 
 ftxr_test_get_version_LDADD = \
