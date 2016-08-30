@@ -69,5 +69,5 @@ int libftxr_record_read_update_journal_entry_list(
 }
 #endif
 
-#endif
+#endif /* !defined( _LIBFTXR_INTERNAL_RECORD_H ) */
 

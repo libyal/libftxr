@@ -6,10 +6,12 @@ AM_CPPFLAGS = \
 	@LIBFTXR_DLL_IMPORT@
 
 TESTS = \
-	test_api_functions.sh
+	test_api_functions.sh \
+	test_api_types.sh
 
 check_SCRIPTS = \
 	test_api_functions.sh \
+	test_api_types.sh \
 	test_runner.sh
 
 EXTRA_DIST = \
@@ -17,7 +19,8 @@ EXTRA_DIST = \
 
 check_PROGRAMS = \
 	ftxr_test_error \
-	ftxr_test_get_version
+	ftxr_test_get_version \
+	ftxr_test_record
 
 ftxr_test_error_SOURCES = \
 	ftxr_test_error.c \
@@ -39,6 +42,19 @@ ftxr_test_get_version_SOURCES = \
 
 ftxr_test_get_version_LDADD = \
 	../libftxr/libftxr.la \
+	@LIBCSTRING_LIBADD@
+
+ftxr_test_record_SOURCES = \
+	ftxr_test_record.c \
+	ftxr_test_libcstring.h \
+	ftxr_test_libftxr.h \
+	ftxr_test_macros.h \
+	ftxr_test_memory.c ftxr_test_memory.h \
+	ftxr_test_unused.h
+
+ftxr_test_record_LDADD = \
+	../libftxr/libftxr.la \
+	@LIBCERROR_LIBADD@ \
 	@LIBCSTRING_LIBADD@
 
 MAINTAINERCLEANFILES = \
