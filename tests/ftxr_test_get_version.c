@@ -46,7 +46,7 @@ int ftxr_test_get_version(
 	          LIBFTXR_VERSION_STRING,
 	          9 );
 
-	FTXR_TEST_ASSERT_EQUAL(
+	FTXR_TEST_ASSERT_EQUAL_INT(
 	 "result",
 	 result,
 	 0 );
