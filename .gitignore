@@ -120,8 +120,8 @@ stamp-h[1-9]
 /libftxr/libftxr.rc
 /libftxr/libftxr_definitions.h
 /tests/ftxr_test_error
-/tests/ftxr_test_get_version
 /tests/ftxr_test_record
+/tests/ftxr_test_support
 /tests/tmp*
 
 # Local library dependencies specific files
