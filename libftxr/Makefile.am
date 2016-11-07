@@ -1,7 +1,6 @@
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/include \
 	-I$(top_srcdir)/common \
-	@LIBCSTRING_CPPFLAGS@ \
 	@LIBCERROR_CPPFLAGS@ \
 	@LIBCNOTIFY_CPPFLAGS@ \
 	@LIBUNA_CPPFLAGS@ \
@@ -21,7 +20,6 @@ libftxr_la_SOURCES = \
 	libftxr_error.c libftxr_error.h \
 	libftxr_libcerror.h \
 	libftxr_libcnotify.h \
-	libftxr_libcstring.h \
 	libftxr_libfdatetime.h \
 	libftxr_libfguid.h \
 	libftxr_libfusn.h \
@@ -31,7 +29,6 @@ libftxr_la_SOURCES = \
 	libftxr_types.h
 
 libftxr_la_LIBADD = \
-	@LIBCSTRING_LIBADD@ \
 	@LIBCERROR_LIBADD@ \
 	@LIBCNOTIFY_LIBADD@ \
 	@LIBUNA_LIBADD@ \

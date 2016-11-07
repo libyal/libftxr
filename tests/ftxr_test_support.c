@@ -1,5 +1,5 @@
 /*
- * Library get version test program
+ * Library support functions test program
  *
  * Copyright (C) 2011-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -20,17 +20,19 @@
  */
 
 #include <common.h>
+#include <file_stream.h>
+#include <narrow_string.h>
+#include <types.h>
 
 #if defined( HAVE_STDLIB_H ) || defined( WINAPI )
 #include <stdlib.h>
 #endif
 
-#include "ftxr_test_libcstring.h"
 #include "ftxr_test_libftxr.h"
 #include "ftxr_test_macros.h"
 #include "ftxr_test_unused.h"
 
-/* Tests retrieving the library version
+/* Tests the libftxr_get_version function
  * Returns 1 if successful or 0 if not
  */
 int ftxr_test_get_version(
@@ -41,7 +43,7 @@ int ftxr_test_get_version(
 
 	version_string = libftxr_get_version();
 
-	result = libcstring_narrow_string_compare(
+	result = narrow_string_compare(
 	          version_string,
 	          LIBFTXR_VERSION_STRING,
 	          9 );
@@ -59,7 +61,7 @@ on_error:
 
 /* The main program
  */
-#if defined( LIBCSTRING_HAVE_WIDE_SYSTEM_CHARACTER )
+#if defined( HAVE_WIDE_SYSTEM_CHARACTER )
 int wmain(
      int argc FTXR_TEST_ATTRIBUTE_UNUSED,
      wchar_t * const argv[] FTXR_TEST_ATTRIBUTE_UNUSED )
@@ -74,7 +76,7 @@ int main(
 
 	FTXR_TEST_RUN(
 	 "libftxr_get_version",
-	 ftxr_test_get_version() )
+	 ftxr_test_get_version );
 
 	return( EXIT_SUCCESS );
 
