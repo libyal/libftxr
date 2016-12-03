@@ -103,5 +103,5 @@ struct ftxr_record_header
 }
 #endif
 
-#endif
+#endif /* !defined( _FTXR_RECORD_H ) */
 

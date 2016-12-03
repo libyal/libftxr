@@ -43,5 +43,5 @@ const char *libftxr_get_version(
 }
 #endif
 
-#endif
+#endif /* !defined( _LIBFTXR_SUPPORT_H ) */
 

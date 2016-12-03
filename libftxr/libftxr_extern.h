@@ -38,9 +38,9 @@
 #include <libftxr/extern.h>
 
 #else
-#define LIBFTXR_EXTERN	extern
+#define LIBFTXR_EXTERN	/* extern */
 
-#endif
+#endif /* !defined( HAVE_LOCAL_LIBFTXR ) */
 
 #endif /* !defined( _LIBFTXR_INTERNAL_EXTERN_H ) */
 

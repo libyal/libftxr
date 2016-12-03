@@ -40,5 +40,5 @@ void libftxr_debug_print_file_attribute_flags(
 }
 #endif
 
-#endif
+#endif /* !defined( _LIBFTXR_DEBUG_H ) */
 

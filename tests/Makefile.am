@@ -2,6 +2,11 @@ AM_CPPFLAGS = \
 	-I$(top_srcdir)/include \
 	-I$(top_srcdir)/common \
 	@LIBCERROR_CPPFLAGS@ \
+	@LIBCNOTIFY_CPPFLAGS@ \
+	@LIBUNA_CPPFLAGS@ \
+	@LIBFDATETIME_CPPFLAGS@ \
+	@LIBFGUID_CPPFLAGS@ \
+	@LIBFUSN_CPPFLAGS@ \
 	@LIBFTXR_DLL_IMPORT@
 
 TESTS = \
@@ -31,6 +36,7 @@ ftxr_test_error_LDADD = \
 	../libftxr/libftxr.la
 
 ftxr_test_record_SOURCES = \
+	ftxr_test_libcerror.h \
 	ftxr_test_libftxr.h \
 	ftxr_test_macros.h \
 	ftxr_test_memory.c ftxr_test_memory.h \
