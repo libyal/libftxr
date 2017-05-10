@@ -21,10 +21,9 @@ DPKG_FILES = \
 	dpkg/compat \
 	dpkg/control \
 	dpkg/copyright \
-	dpkg/copyright.in \
 	dpkg/rules \
-	dpkg/libftxr-dev.docs \
-	dpkg/libftxr.docs \
+	dpkg/libftxr-dev.install \
+	dpkg/libftxr.install \
 	dpkg/source/format
 
 GETTEXT_FILES = \
