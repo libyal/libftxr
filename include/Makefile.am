@@ -2,6 +2,7 @@ include_HEADERS = \
 	libftxr.h
 
 pkginclude_HEADERS = \
+	libftxr/codepage.h \
 	libftxr/definitions.h \
 	libftxr/error.h \
 	libftxr/extern.h \
