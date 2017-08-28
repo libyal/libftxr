@@ -60,13 +60,13 @@ int ftxr_test_record_initialize(
 	 result,
 	 1 );
 
-        FTXR_TEST_ASSERT_IS_NOT_NULL(
-         "record",
-         record );
+	FTXR_TEST_ASSERT_IS_NOT_NULL(
+	 "record",
+	 record );
 
-        FTXR_TEST_ASSERT_IS_NULL(
-         "error",
-         error );
+	FTXR_TEST_ASSERT_IS_NULL(
+	 "error",
+	 error );
 
 	result = libftxr_record_free(
 	          &record,
@@ -77,13 +77,13 @@ int ftxr_test_record_initialize(
 	 result,
 	 1 );
 
-        FTXR_TEST_ASSERT_IS_NULL(
-         "record",
-         record );
+	FTXR_TEST_ASSERT_IS_NULL(
+	 "record",
+	 record );
 
-        FTXR_TEST_ASSERT_IS_NULL(
-         "error",
-         error );
+	FTXR_TEST_ASSERT_IS_NULL(
+	 "error",
+	 error );
 
 	/* Test error cases
 	 */
@@ -96,9 +96,9 @@ int ftxr_test_record_initialize(
 	 result,
 	 -1 );
 
-        FTXR_TEST_ASSERT_IS_NOT_NULL(
-         "error",
-         error );
+	FTXR_TEST_ASSERT_IS_NOT_NULL(
+	 "error",
+	 error );
 
 	libcerror_error_free(
 	 &error );
@@ -114,9 +114,9 @@ int ftxr_test_record_initialize(
 	 result,
 	 -1 );
 
-        FTXR_TEST_ASSERT_IS_NOT_NULL(
-         "error",
-         error );
+	FTXR_TEST_ASSERT_IS_NOT_NULL(
+	 "error",
+	 error );
 
 	libcerror_error_free(
 	 &error );
@@ -248,9 +248,9 @@ int ftxr_test_record_free(
 	 result,
 	 -1 );
 
-        FTXR_TEST_ASSERT_IS_NOT_NULL(
-         "error",
-         error );
+	FTXR_TEST_ASSERT_IS_NOT_NULL(
+	 "error",
+	 error );
 
 	libcerror_error_free(
 	 &error );
