@@ -5,13 +5,13 @@ Summary: Library to access the Transactional Registry (TxR) format
 Group: System Environment/Libraries
 License: LGPL
 Source: %{name}-%{version}.tar.gz
-URL: https://github.com/libyal/libftxr/
+URL: https://github.com/libyal/libftxr
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-@libftxr_spec_requires@ @ax_libcdata_spec_requires@ @ax_libcerror_spec_requires@ @ax_libcnotify_spec_requires@ @ax_libcthreads_spec_requires@ @ax_libfdatetime_spec_requires@ @ax_libfguid_spec_requires@ @ax_libftxr_spec_requires@ @ax_libuna_spec_requires@
-@libftxr_spec_build_requires@ @ax_libcdata_spec_build_requires@ @ax_libcerror_spec_build_requires@ @ax_libcnotify_spec_build_requires@ @ax_libcthreads_spec_build_requires@ @ax_libfdatetime_spec_build_requires@ @ax_libfguid_spec_build_requires@ @ax_libftxr_spec_build_requires@ @ax_libuna_spec_build_requires@
+@libftxr_spec_requires@ @ax_libcerror_spec_requires@ @ax_libcnotify_spec_requires@ @ax_libfdatetime_spec_requires@ @ax_libfguid_spec_requires@ @ax_libfusn_spec_requires@ @ax_libuna_spec_requires@
+@libftxr_spec_build_requires@ @ax_libcerror_spec_build_requires@ @ax_libcnotify_spec_build_requires@ @ax_libfdatetime_spec_build_requires@ @ax_libfguid_spec_build_requires@ @ax_libfusn_spec_build_requires@ @ax_libuna_spec_build_requires@
 
 %description
-libftxr is a library to access the Transactional Registry (TxR) format
+Library to access the Transactional Registry (TxR) format
 
 %package devel
 Summary: Header files and libraries for developing applications for libftxr
