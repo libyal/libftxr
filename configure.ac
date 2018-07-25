@@ -2,7 +2,7 @@ AC_PREREQ( 2.59 )
 
 AC_INIT(
  [libftxr],
- [20180608],
+ [20180725],
  [joachim.metz@gmail.com])
 
 AC_CONFIG_SRCDIR(

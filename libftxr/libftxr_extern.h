@@ -37,8 +37,11 @@
 
 #include <libftxr/extern.h>
 
+#define LIBFTXR_EXTERN_VARIABLE	LIBFTXR_EXTERN
+
 #else
-#define LIBFTXR_EXTERN	/* extern */
+#define LIBFTXR_EXTERN		/* extern */
+#define LIBFTXR_EXTERN_VARIABLE	extern
 
 #endif /* !defined( HAVE_LOCAL_LIBFTXR ) */
 
