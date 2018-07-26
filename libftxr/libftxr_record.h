@@ -53,16 +53,10 @@ int libftxr_record_free(
      libcerror_error_t **error );
 
 LIBFTXR_EXTERN \
-int libftxr_record_read(
+int libftxr_record_copy_from_byte_stream(
      libftxr_record_t *txr_record,
-     const uint8_t *record_data,
-     size_t record_data_size,
-     libcerror_error_t **error );
-
-int libftxr_record_read_update_journal_entry_list(
-     libftxr_internal_record_t *internal_record,
-     const uint8_t *record_data,
-     size_t record_data_size,
+     const uint8_t *byte_stream,
+     size_t byte_stream_size,
      libcerror_error_t **error );
 
 #if defined( __cplusplus )

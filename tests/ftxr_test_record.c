@@ -289,13 +289,7 @@ int main(
 	 "libftxr_record_free",
 	 ftxr_test_record_free );
 
-	/* TODO: add tests for libftxr_record_read */
-
-#if defined( __GNUC__ ) && !defined( LIBFTXR_DLL_IMPORT )
-
-	/* TODO: add tests for libftxr_record_read_update_journal_entry_list */
-
-#endif /* defined( __GNUC__ ) && !defined( LIBFTXR_DLL_IMPORT ) */
+	/* TODO: add tests for libftxr_record_copy_from_byte_stream */
 
 	return( EXIT_SUCCESS );
 

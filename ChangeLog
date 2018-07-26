@@ -1,15 +1,8 @@
-20160829
-* worked on tests
-
-20160106
-* 2016 update
-
-20150121
-* bug fixes
-
-20150104
-* 2015 update
+TODO:
+* make libftxr_record_copy_from_byte_stream useful
+* add test for libftxr_record_copy_from_byte_stream
 
 20141129
+* see `git log' for more recent change log
 * Created stand-alone version of version used in libfsclfs
 
