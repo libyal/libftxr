@@ -6,3 +6,4 @@ dnl Function to detect if libftxr dependencies are available
 AC_DEFUN([AX_LIBFTXR_CHECK_LOCAL],
   [dnl No additional checks.
   ])
+

@@ -24,13 +24,6 @@
 
 #include <common.h>
 
-/* If Cygwin libtool DLL support is enabled and do not want to create static
- * executables set LIBFTXR_DLL_IMPORT before including libftxr.h
- */
-#if defined( _WIN32 ) && defined( DLL_EXPORT ) && !defined( HAVE_STATIC_EXECUTABLES )
-#define LIBFTXR_DLL_IMPORT
-#endif
-
 #include <libftxr.h>
 
 #endif /* !defined( _FTXR_TEST_LIBFTXR_H ) */

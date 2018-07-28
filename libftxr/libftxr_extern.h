@@ -28,13 +28,6 @@
  */
 #if !defined( HAVE_LOCAL_LIBFTXR )
 
-/* If libtool DLL support is enabled set LIBFTXR_DLL_EXPORT
- * before including libftxr/extern.h
- */
-#if defined( _WIN32 ) && defined( DLL_EXPORT )
-#define LIBFTXR_DLL_EXPORT
-#endif
-
 #include <libftxr/extern.h>
 
 #define LIBFTXR_EXTERN_VARIABLE	LIBFTXR_EXTERN

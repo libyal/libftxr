@@ -109,6 +109,8 @@ int ftxr_test_record_initialize(
 	          &record,
 	          &error );
 
+	record = NULL;
+
 	FTXR_TEST_ASSERT_EQUAL_INT(
 	 "result",
 	 result,
@@ -120,8 +122,6 @@ int ftxr_test_record_initialize(
 
 	libcerror_error_free(
 	 &error );
-
-	record = NULL;
 
 #if defined( HAVE_FTXR_TEST_MEMORY )
 
