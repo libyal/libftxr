@@ -9,6 +9,8 @@ Homepage: https://github.com/libyal/libftxr
 Package: libftxr
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libftxr1
+Replaces: libftxr1
 Suggests: libftxr-dbg
 Description: Library to access the Transactional Registry (TxR) format
  libftxr is a library to access the Transactional Registry (TxR) format.
