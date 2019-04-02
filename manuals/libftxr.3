@@ -1,11 +1,9 @@
-.Dd July 26, 2018
+.Dd April  3, 2019
 .Dt libftxr 3
 .Os libftxr
 .Sh NAME
 .Nm libftxr.h
 .Nd Library to access the Transactional Registry (TxR) format
-.Sh LIBRARY
-.Lb libftxr
 .Sh SYNOPSIS
 .In libftxr.h
 .Pp
@@ -17,21 +15,21 @@ Error functions
 .Ft void
 .Fn libftxr_error_free "libftxr_error_t **error"
 .Ft int
-.Fn libftxr_error_fprint "libftxr_error_t *error, FILE *stream"
+.Fn libftxr_error_fprint "libftxr_error_t *error" "FILE *stream"
 .Ft int
-.Fn libftxr_error_sprint "libftxr_error_t *error, char *string, size_t size"
+.Fn libftxr_error_sprint "libftxr_error_t *error" "char *string" "size_t size"
 .Ft int
-.Fn libftxr_error_backtrace_fprint "libftxr_error_t *error, FILE *stream"
+.Fn libftxr_error_backtrace_fprint "libftxr_error_t *error" "FILE *stream"
 .Ft int
-.Fn libftxr_error_backtrace_sprint "libftxr_error_t *error, char *string, size_t size"
+.Fn libftxr_error_backtrace_sprint "libftxr_error_t *error" "char *string" "size_t size"
 .Pp
 Record functions
 .Ft int
-.Fn libftxr_record_initialize "libftxr_record_t **txr_record, libftxr_error_t **error"
+.Fn libftxr_record_initialize "libftxr_record_t **txr_record" "libftxr_error_t **error"
 .Ft int
-.Fn libftxr_record_free "libftxr_record_t **txr_record, libftxr_error_t **error"
+.Fn libftxr_record_free "libftxr_record_t **txr_record" "libftxr_error_t **error"
 .Ft int
-.Fn libftxr_record_copy_from_byte_stream "libftxr_record_t *txr_record, const uint8_t *byte_stream, size_t byte_stream_size, libftxr_error_t **error"
+.Fn libftxr_record_copy_from_byte_stream "libftxr_record_t *txr_record" "const uint8_t *byte_stream" "size_t byte_stream_size" "libftxr_error_t **error"
 .Sh DESCRIPTION
 The
 .Fn libftxr_get_version
@@ -49,7 +47,7 @@ Please report bugs of any kind on the project issue tracker: https://github.com/
 These man pages are generated from "libftxr.h".
 .Sh COPYRIGHT
 Copyright (C) 2011-2019, Joachim Metz <joachim.metz@gmail.com>.
-
+.sp
 This is free software; see the source for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 .Sh SEE ALSO

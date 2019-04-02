@@ -13,6 +13,14 @@ BuildRequires: gcc @ax_libcerror_spec_build_requires@ @ax_libcnotify_spec_build_
 %description -n libftxr
 Library to access the Transactional Registry (TxR) format
 
+%package -n libftxr-static
+Summary: Library to access the Transactional Registry (TxR) format
+Group: Development/Libraries
+Requires: libftxr = %{version}-%{release}
+
+%description -n libftxr-static
+Static library version of libftxr.
+
 %package -n libftxr-devel
 Summary: Header files and libraries for developing applications for libftxr
 Group: Development/Libraries
@@ -45,11 +53,16 @@ rm -rf %{buildroot}
 %doc AUTHORS README
 %attr(755,root,root) %{_libdir}/*.so.*
 
+%files -n libftxr-static
+%defattr(644,root,root,755)
+%license COPYING
+%doc AUTHORS README
+%attr(755,root,root) %{_libdir}/*.a
+
 %files -n libftxr-devel
 %defattr(644,root,root,755)
 %license COPYING
 %doc AUTHORS README
-%{_libdir}/*.a
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libftxr.pc
