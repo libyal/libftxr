@@ -2,7 +2,7 @@ AC_PREREQ( 2.59 )
 
 AC_INIT(
  [libftxr],
- [20200709],
+ [20200804],
  [joachim.metz@gmail.com])
 
 AC_CONFIG_SRCDIR(
@@ -21,6 +21,7 @@ AC_LIBTOOL_WIN32_DLL
 dnl Checks for programs
 AC_PROG_CC
 AC_PROG_GCC_TRADITIONAL
+AC_PROG_CXX
 AC_PROG_MAKE_SET
 AC_PROG_INSTALL
 
@@ -81,32 +82,12 @@ AX_LIBFUSN_CHECK_ENABLE
 dnl Check if libftxr required headers and functions are available
 AX_LIBFTXR_CHECK_LOCAL
 
+dnl Check if DLL support is needed
+AX_LIBFTXR_CHECK_DLL_SUPPORT
+
 dnl Check if tests required headers and functions are available
 AX_TESTS_CHECK_LOCAL
-
-dnl Check if DLL support is needed
-AS_IF(
- [test "x$enable_shared" = xyes],
- [AS_CASE(
-  [$host],
-  [*cygwin* | *mingw* | *msys*],
-  [AC_DEFINE(
-   [HAVE_DLLMAIN],
-   [1],
-   [Define to 1 to enable the DllMain function.])
-  AC_SUBST(
-   [HAVE_DLLMAIN],
-   [1])
-
-  AC_SUBST(
-   [LIBFTXR_DLL_EXPORT],
-   ["-DLIBFTXR_DLL_EXPORT"])
-
-  AC_SUBST(
-   [LIBFTXR_DLL_IMPORT],
-   ["-DLIBFTXR_DLL_IMPORT"])
-  ])
- ])
+AX_TESTS_CHECK_OSSFUZZ
 
 dnl Set additional compiler flags
 CFLAGS="$CFLAGS -Wall";
@@ -144,6 +125,7 @@ AC_CONFIG_FILES([po/Makefile.in])
 AC_CONFIG_FILES([po/Makevars])
 AC_CONFIG_FILES([manuals/Makefile])
 AC_CONFIG_FILES([tests/Makefile])
+AC_CONFIG_FILES([ossfuzz/Makefile])
 AC_CONFIG_FILES([msvscpp/Makefile])
 dnl Generate header files
 AC_CONFIG_FILES([include/libftxr.h])
