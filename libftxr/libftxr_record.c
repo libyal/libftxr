@@ -181,24 +181,14 @@ int libftxr_record_copy_from_byte_stream(
 
 		return( -1 );
 	}
-	if( byte_stream_size > (size_t) SSIZE_MAX )
+	if( ( byte_stream_size < sizeof( ftxr_record_header_t ) )
+	 || ( byte_stream_size > (size_t) SSIZE_MAX ) )
 	{
 		libcerror_error_set(
 		 error,
 		 LIBCERROR_ERROR_DOMAIN_ARGUMENTS,
-		 LIBCERROR_ARGUMENT_ERROR_VALUE_EXCEEDS_MAXIMUM,
-		 "%s: invalid byte stream size value exceeds maximum.",
-		 function );
-
-		return( -1 );
-	}
-	if( byte_stream_size < sizeof( ftxr_record_header_t ) )
-	{
-		libcerror_error_set(
-		 error,
-		 LIBCERROR_ERROR_DOMAIN_ARGUMENTS,
-		 LIBCERROR_ARGUMENT_ERROR_VALUE_TOO_SMALL,
-		 "%s: invalid byte stream value too small.",
+		 LIBCERROR_ARGUMENT_ERROR_VALUE_OUT_OF_BOUNDS,
+		 "%s: invalid byte stream size value out of bounds.",
 		 function );
 
 		return( -1 );
