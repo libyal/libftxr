@@ -24,7 +24,7 @@ BEGIN
       VALUE "FileDescription",		"Library to access the Transactional Registry (TxR) format\0"
       VALUE "FileVersion",		"@VERSION@" "\0"
       VALUE "InternalName",		"libftxr.dll\0"
-      VALUE "LegalCopyright",		"(C) 2011-2023, Joachim Metz <joachim.metz@gmail.com>\0"
+      VALUE "LegalCopyright",		"(C) 2011-2024, Joachim Metz <joachim.metz@gmail.com>\0"
       VALUE "OriginalFilename",		"libftxr.dll\0"
       VALUE "ProductName",		"libftxr\0"
       VALUE "ProductVersion",		"@VERSION@" "\0"
