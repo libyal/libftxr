@@ -4,9 +4,7 @@ man_MANS = \
 EXTRA_DIST = \
 	libftxr.3
 
-MAINTAINERCLEANFILES = \
+DISTCLEANFILES = \
+	Makefile \
 	Makefile.in
-
-distclean: clean
-	-rm -f Makefile
 
