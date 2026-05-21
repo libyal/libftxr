@@ -31,14 +31,17 @@
  */
 #if defined( LIBFTXR_DLL_EXPORT )
 #define LIBFTXR_EXTERN __declspec(dllexport)
+#define LIBFTXR_EXTERN_VARIABLE extern __declspec(dllexport)
 
 #elif defined( LIBFTXR_DLL_IMPORT )
-#define LIBFTXR_EXTERN extern __declspec(dllimport)
+#define LIBFTXR_EXTERN __declspec(dllimport)
+#define LIBFTXR_EXTERN_VARIABLE extern __declspec(dllimport)
 
 #else
 #define LIBFTXR_EXTERN extern
+#define LIBFTXR_EXTERN_VARIABLE extern
 
-#endif
+#endif /* defined( LIBFTXR_DLL_EXPORT ) */
 
 #endif /* !defined( _LIBFTXR_EXTERN_H ) */
 

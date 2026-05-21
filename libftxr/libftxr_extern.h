@@ -30,12 +30,6 @@
 
 #include <libftxr/extern.h>
 
-#if defined( __CYGWIN__ ) || defined( __MINGW32__ )
-#define LIBFTXR_EXTERN_VARIABLE	extern
-#else
-#define LIBFTXR_EXTERN_VARIABLE	LIBFTXR_EXTERN
-#endif
-
 #else
 #define LIBFTXR_EXTERN		/* extern */
 #define LIBFTXR_EXTERN_VARIABLE	extern
