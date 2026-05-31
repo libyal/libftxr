@@ -154,7 +154,9 @@ int libftxr_record_copy_from_byte_stream(
      size_t byte_stream_size,
      libcerror_error_t **error )
 {
+#ifdef TODO
 	libftxr_internal_record_t *internal_record = NULL;
+#endif
 	static char *function                      = "libftxr_record_read";
 
 	if( record == NULL )
@@ -168,7 +170,9 @@ int libftxr_record_copy_from_byte_stream(
 
 		return( -1 );
 	}
+#ifdef TODO
 	internal_record = (libftxr_internal_record_t *) record;
+#endif
 
 	if( byte_stream == NULL )
 	{
