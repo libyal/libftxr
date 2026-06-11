@@ -24,6 +24,19 @@
 
 #include <common.h>
 
+#if !defined( __CYGWIN__ ) && !defined( _WIN32 ) && defined( __has_attribute )
+#if __has_attribute( visibility )
+#define LIBFTXR_INTERNAL	__attribute__((visibility("hidden"))) extern
+
+#else
+#define LIBFTXR_INTERNAL	extern
+
+#endif /* __has_attribute( visibility ) */
+#else
+#define LIBFTXR_INTERNAL	extern
+
+#endif /* !defined( __CYGWIN__ ) && !defined( _WIN32 ) && defined( __has_attribute ) */
+
 /* Define HAVE_LOCAL_LIBFTXR for local use of libftxr
  */
 #if !defined( HAVE_LOCAL_LIBFTXR )
@@ -32,7 +45,7 @@
 
 #else
 #define LIBFTXR_EXTERN		/* extern */
-#define LIBFTXR_EXTERN_VARIABLE	extern
+#define LIBFTXR_EXTERN_VARIABLE	LIBFTXR_INTERNAL
 
 #endif /* !defined( HAVE_LOCAL_LIBFTXR ) */
 
