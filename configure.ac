@@ -2,7 +2,7 @@ AC_PREREQ([2.71])
 
 AC_INIT(
   [libftxr],
-  [20260622],
+  [20260624],
   [https://github.com/libyal/libftxr/issues])
 
 AC_CONFIG_SRCDIR(

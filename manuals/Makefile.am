@@ -2,7 +2,7 @@ man_MANS = \
 	libftxr.3
 
 EXTRA_DIST = \
-	libftxr.3
+	$(man_MANS)
 
 DISTCLEANFILES = \
 	Makefile \
